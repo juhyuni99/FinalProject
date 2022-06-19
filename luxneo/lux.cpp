@@ -1,11 +1,8 @@
 #include <Arduino.h>
 #include <IBMIOTF8266.h>
 
-// USER CODE EXAMPLE : Publish Interval. The periodic update is normally recommended.
-// And this can be a good example for the user code addition
+
 String user_html = ""
-    "<p><input type='text' name='meta.pubInterval' placeholder='Publish Interval'>";
-// USER CODE EXAMPLE : command handling
 
 char*               ssid_pfix = (char*)"IOTLux";
 unsigned long       lastPublishMillis = - pubInterval;
