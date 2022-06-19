@@ -1,0 +1,219 @@
+[
+    {
+        "id": "150399f1ee50c853",
+        "type": "http request",
+        "z": "721a8ca177d679ca",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getMsrstnAcctoRltmMesureDnsty?stationName=정왕동&dataTerm=month&pageNo=1&numOfRows=100&returnType=xml&serviceKey=bGBkONzjNyVsKZQUrt2w6hrJ3gFlYYs0Dx7jX3RjMHNSQSP5i%2BwsvkcO1E%2BeE2YbKmQU6qvgwD4i37FJh3mzUA%3D%3D&ver=1.3",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 350,
+        "y": 340,
+        "wires": [
+            [
+                "0af61c5b56d6263d"
+            ]
+        ]
+    },
+    {
+        "id": "a0c9316a720d3c68",
+        "type": "inject",
+        "z": "721a8ca177d679ca",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 340,
+        "wires": [
+            [
+                "150399f1ee50c853"
+            ]
+        ]
+    },
+    {
+        "id": "0af61c5b56d6263d",
+        "type": "xml",
+        "z": "721a8ca177d679ca",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 550,
+        "y": 340,
+        "wires": [
+            [
+                "49aa615463161b81"
+            ]
+        ]
+    },
+    {
+        "id": "49aa615463161b81",
+        "type": "function",
+        "z": "721a8ca177d679ca",
+        "name": "",
+        "func": "msg.payload = msg.payload.response.body[0].items[0].item[0]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 340,
+        "wires": [
+            [
+                "93a3b6b3e86fa9c4",
+                "a17acb83c5460c26",
+                "b14ef449a1022e3f",
+                "17a1963c257f21be"
+            ]
+        ]
+    },
+    {
+        "id": "93a3b6b3e86fa9c4",
+        "type": "ui_text",
+        "z": "721a8ca177d679ca",
+        "group": "d5278ff2f0174761",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "미세먼지 농도",
+        "format": "{{msg.payload.pm10Value[0]}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 940,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "a17acb83c5460c26",
+        "type": "ui_gauge",
+        "z": "721a8ca177d679ca",
+        "name": "",
+        "group": "d5278ff2f0174761",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "미세먼지 등급",
+        "label": "units",
+        "format": "{{msg.payload.pm10Grade[0]}}",
+        "min": "1",
+        "max": "4",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "2.1",
+        "seg2": "3.1",
+        "className": "",
+        "x": 940,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "b14ef449a1022e3f",
+        "type": "debug",
+        "z": "721a8ca177d679ca",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "17a1963c257f21be",
+        "type": "function",
+        "z": "721a8ca177d679ca",
+        "name": "",
+        "func": "var evt = {\n    \"d\":{\n    }\n}\n\nevt.d.air=msg.payload.pm10Grade[0];\nreturn {payload:JSON.stringify(evt)};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 240,
+        "wires": [
+            [
+                "2757a14f7b6d67d5"
+            ]
+        ]
+    },
+    {
+        "id": "2757a14f7b6d67d5",
+        "type": "ibmiot out",
+        "z": "721a8ca177d679ca",
+        "authentication": "apiKey",
+        "apiKey": "bdd22bbbe4cda43f",
+        "outputType": "evt",
+        "deviceId": "dev2",
+        "deviceType": "ESP8266",
+        "eventCommandType": "status",
+        "format": "json",
+        "data": "data",
+        "qos": 0,
+        "name": "IBM IoT",
+        "service": "registered",
+        "x": 1100,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "d5278ff2f0174761",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "168d6df78836594f",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "bdd22bbbe4cda43f",
+        "type": "ibmiot",
+        "name": "first",
+        "keepalive": "60",
+        "serverName": "",
+        "cleansession": true,
+        "appId": "",
+        "shared": false
+    },
+    {
+        "id": "168d6df78836594f",
+        "type": "ui_tab",
+        "name": "test",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
