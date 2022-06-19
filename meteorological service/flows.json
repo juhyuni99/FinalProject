@@ -1,0 +1,218 @@
+[
+    {
+        "id": "efe500d60767bef7",
+        "type": "http request",
+        "z": "721a8ca177d679ca",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=4139059300",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 350,
+        "y": 440,
+        "wires": [
+            [
+                "44fc587669b257ad"
+            ]
+        ]
+    },
+    {
+        "id": "fecd4698229bc90f",
+        "type": "inject",
+        "z": "721a8ca177d679ca",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 440,
+        "wires": [
+            [
+                "efe500d60767bef7"
+            ]
+        ]
+    },
+    {
+        "id": "44fc587669b257ad",
+        "type": "xml",
+        "z": "721a8ca177d679ca",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 550,
+        "y": 440,
+        "wires": [
+            [
+                "7bd926a95798efaf",
+                "9451b493b0db06cd"
+            ]
+        ]
+    },
+    {
+        "id": "7bd926a95798efaf",
+        "type": "function",
+        "z": "721a8ca177d679ca",
+        "name": "",
+        "func": "msg.payload = msg.payload.rss.channel[0].item[0].description[0].body[0].data[0]\nif(msg.payload.sky[0] === \"1\")\n{\n    msg.payload.sky[0] = \"맑음\"\n    msg.img = \"http://cdn.joongboo.com/news/photo/202205/2022052601001165500049411.jpg\"\n}\nelse if(msg.payload.sky[0] === \"2\")\n{\n    msg.payload.sky[0] = \"구름 조금\"\n    msg.img = \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaqS1t_6IFJPI94-BpboS6Vyysoits1stU0A&usqp=CAU\"\n}\nelse if(msg.payload.sky[0] === \"3\")\n{\n    msg.payload.sky[0] = \"구름 많음\"\n    msg.img = \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeZg9rAcHDETNhQW_fvAU1RC38Ypmt97uECw&usqp=CAU\"\n}\nelse if(msg.payload.sky[0] === \"4\")\n{\n    msg.payload.sky[0] = \"흐림\"\n    msg.img = \"https://www.newsjeju.net/news/photo/202101/356978_439381_532.jpg\"\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 440,
+        "wires": [
+            [
+                "dceed890c55095ed",
+                "df1d9f90d4406cd7",
+                "4e0ab9bbea0439be",
+                "5df9ebb2fd7b9d98",
+                "aa43d46016a65727"
+            ]
+        ]
+    },
+    {
+        "id": "9451b493b0db06cd",
+        "type": "ui_text",
+        "z": "721a8ca177d679ca",
+        "group": "d5278ff2f0174761",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "날짜",
+        "format": "{{msg.payload.rss.channel[0].pubDate[0]}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 750,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "dceed890c55095ed",
+        "type": "ui_text",
+        "z": "721a8ca177d679ca",
+        "group": "d5278ff2f0174761",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "기준 시간",
+        "format": "{{msg.payload.hour[0]+\"시\"}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 940,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "df1d9f90d4406cd7",
+        "type": "ui_text",
+        "z": "721a8ca177d679ca",
+        "group": "d5278ff2f0174761",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "정왕 온도",
+        "format": "{{msg.payload.temp[0]}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 940,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "4e0ab9bbea0439be",
+        "type": "ui_text",
+        "z": "721a8ca177d679ca",
+        "group": "d5278ff2f0174761",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "정왕 날씨",
+        "format": "{{msg.payload.sky[0]}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 940,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "5df9ebb2fd7b9d98",
+        "type": "ui_template",
+        "z": "721a8ca177d679ca",
+        "group": "d5278ff2f0174761",
+        "name": "",
+        "order": 10,
+        "width": "6",
+        "height": "6",
+        "format": "<img src=\"{{msg.img}}\">",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 940,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aa43d46016a65727",
+        "type": "debug",
+        "z": "721a8ca177d679ca",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 950,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "d5278ff2f0174761",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "168d6df78836594f",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "168d6df78836594f",
+        "type": "ui_tab",
+        "name": "test",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
