@@ -11,6 +11,8 @@ unsigned long lastPublishMillis = -pubInterval;
 const int trigPin = 13;
 const int echoPin = 12;
 
+const int RELAY = 15;
+
 long duration;
 float distance;
 
@@ -23,13 +25,8 @@ void getDistance()
   digitalWrite(trigPin, LOW);
 
   duration = pulseIn(echoPin, HIGH);
-  // Serial.print("Duration : ");
-  // Serial.println(duration);
 
   distance = duration * 0.017;
-
-  // Serial.print(distance);
-  // Serial.println("cm");
 }
 
 void publishData()
@@ -44,6 +41,7 @@ void publishData()
   sprintf(buf, "%2.1f", distance);
 
   data["distance"] = buf;
+  data["valve"] = digitalRead(RELAY) ? "on" : "off";
 
   serializeJson(root, msgBuffer);
   client.publish(publishTopic, msgBuffer);
@@ -52,6 +50,19 @@ void publishData()
 void handleUserCommand(JsonDocument *root)
 {
   JsonObject d = (*root)["d"];
+
+  if (d.containsKey("valve"))
+  {
+    if (strcmp(d["valve"], "on"))
+    {
+      digitalWrite(RELAY, LOW);
+    }
+    else
+    {
+      digitalWrite(RELAY, HIGH);
+    }
+    lastPublishMillis = -pubInterval;
+  }
 }
 
 void message(char *topic, byte *payload, unsigned int payloadLength)
@@ -83,6 +94,8 @@ void setup()
 
   pinMode(trigPin, OUTPUT);
   pinMode(echoPin, INPUT);
+
+  pinMode(RELAY, OUTPUT);
 
   initDevice();
 
