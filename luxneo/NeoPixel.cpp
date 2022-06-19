@@ -7,11 +7,6 @@
 #define             ledNum 4
 
 String user_html = ""
-// USER CODE EXAMPLE : your custom config variable 
-// in meta.XXXXX, XXXXX should match to ArduinoJson index to access
-    "<p><input type='text' name='meta.yourVar' placeholder='Your Custom Config'>";
-                    ;
-// for meta.XXXXX, this var is the C variable to hold the XXXXX
 
 char*               ssid_pfix = (char*)"IOTneojuju";
 unsigned long       lastPublishMillis = - pubInterval;
@@ -30,9 +25,6 @@ void publishData() {
     data["r"] = red;
     data["g"] = green;
     data["b"] = blue;
-
-
-    
 
     serializeJson(root, msgBuffer);
     client.publish(publishTopic, msgBuffer);
