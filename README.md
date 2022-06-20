@@ -19,7 +19,11 @@
 
 
 
+>#Could server
+>>뮤직 셀렉터, 미세먼지 알라미, 침입자 감지 시스템, 미니 IoT Controler-LED 제어
 
+>#Edge server
+>>미니 IoT Controler-google assistant mqtt publish, 스마트 가로등
 
 ### 1)집 외부 가로등 구현
 
@@ -32,3 +36,5 @@
 
 [node-red]
 <img width="785" alt="image" src="https://user-images.githubusercontent.com/102004234/174479882-1d2d93f9-9951-48b5-88fc-ac9e7a2f82ec.png">
+
+
