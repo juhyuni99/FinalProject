@@ -1,0 +1,233 @@
+[
+    {
+        "id": "baec2396db8c1ea0",
+        "type": "tab",
+        "label": "초음파센서",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "18e18a132b454aa7",
+        "type": "ibmiot in",
+        "z": "baec2396db8c1ea0",
+        "authentication": "apiKey",
+        "apiKey": "bdd22bbbe4cda43f",
+        "inputType": "evt",
+        "logicalInterface": "",
+        "ruleId": "",
+        "deviceId": "dev1",
+        "applicationId": "",
+        "deviceType": "ESP8266",
+        "eventType": "status",
+        "commandType": "",
+        "format": "json",
+        "name": "Ultra",
+        "service": "registered",
+        "allDevices": "",
+        "allApplications": "",
+        "allDeviceTypes": "",
+        "allLogicalInterfaces": "",
+        "allEvents": "",
+        "allCommands": "",
+        "allFormats": "",
+        "qos": 0,
+        "x": 90,
+        "y": 340,
+        "wires": [
+            [
+                "4a7737ac7bae385b",
+                "4493b026734aa6bc"
+            ]
+        ]
+    },
+    {
+        "id": "92c80da8c51c926e",
+        "type": "ui_switch",
+        "z": "baec2396db8c1ea0",
+        "name": "",
+        "label": "모드 설정",
+        "tooltip": "",
+        "group": "102a258748211d26",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "secure",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "daily",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 420,
+        "y": 240,
+        "wires": [
+            [
+                "3460ce2d23cb4fb2",
+                "c93f08c987d92e07"
+            ]
+        ]
+    },
+    {
+        "id": "3460ce2d23cb4fb2",
+        "type": "function",
+        "z": "baec2396db8c1ea0",
+        "name": "",
+        "func": "var evt = {\n    d:{\n    }\n}\n\nevt.d.mode=msg.payload;\nreturn {payload:JSON.stringify(evt)};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 240,
+        "wires": [
+            [
+                "9a5b348f11d16a22"
+            ]
+        ]
+    },
+    {
+        "id": "ce62fb0a8992e4f2",
+        "type": "e-mail",
+        "z": "baec2396db8c1ea0",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "secure": true,
+        "tls": true,
+        "name": "daeun9158@gmail.com",
+        "dname": "",
+        "x": 570,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "4a7737ac7bae385b",
+        "type": "function",
+        "z": "baec2396db8c1ea0",
+        "name": "",
+        "func": "var distance = msg.payload.d.distance;\nvar mode = msg.payload.d.mode;\n\nif(mode === \"secure\" && distance <= 10)\n{\n    msg.payload = \"침입자가 들어왔습니다\";\n    return msg;\n}\nelse{\n    return null;\n}\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 340,
+        "wires": [
+            [
+                "ce62fb0a8992e4f2",
+                "15166166992de881"
+            ]
+        ]
+    },
+    {
+        "id": "15166166992de881",
+        "type": "debug",
+        "z": "baec2396db8c1ea0",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 530,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "c93f08c987d92e07",
+        "type": "debug",
+        "z": "baec2396db8c1ea0",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "9a5b348f11d16a22",
+        "type": "ibmiot out",
+        "z": "baec2396db8c1ea0",
+        "authentication": "apiKey",
+        "apiKey": "bdd22bbbe4cda43f",
+        "outputType": "cmd",
+        "deviceId": "dev1",
+        "deviceType": "ESP8266",
+        "eventCommandType": "status",
+        "format": "json",
+        "data": "data",
+        "qos": 0,
+        "name": "Mode",
+        "service": "registered",
+        "x": 750,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "4493b026734aa6bc",
+        "type": "function",
+        "z": "baec2396db8c1ea0",
+        "name": "",
+        "func": "msg.payload=msg.payload.d.mode;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 240,
+        "wires": [
+            [
+                "92c80da8c51c926e"
+            ]
+        ]
+    },
+    {
+        "id": "bdd22bbbe4cda43f",
+        "type": "ibmiot",
+        "name": "first",
+        "keepalive": "60",
+        "serverName": "",
+        "cleansession": true,
+        "appId": "",
+        "shared": false
+    },
+    {
+        "id": "102a258748211d26",
+        "type": "ui_group",
+        "name": "relay",
+        "tab": "184050491b2302fa",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "184050491b2302fa",
+        "type": "ui_tab",
+        "name": "Final",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
