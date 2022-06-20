@@ -166,7 +166,8 @@ class SampleAssistant(object):
                     logging.info('Playing assistant response.')
                     text = text.replace(" ",'')
                     print('text =',text)
-                    if "틀어줘" in text:
+                    #'노래제목' 틀어줘 명령시 노래 파일 재생
+                    if "틀어줘" in text: 
                         client.publish(topic,"open")
                         text = text.replace("틀어줘",'')
                         tts_ko = gTTS("틀어드리겠습니다", lang='ko')
@@ -175,6 +176,7 @@ class SampleAssistant(object):
                         print(text)
                         os.system("mpg321 "+text+".mp3")
                         return
+                    #불켜,불꺼 명령시 mqtt topic으로 publish 
                     if "불켜" in text:
                         client.publish(topic,"on")
                         tts_ko = gTTS("불켜드리겠습니다", lang='ko')
