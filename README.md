@@ -57,12 +57,25 @@ https://user-images.githubusercontent.com/102004234/174608405-8acd9e48-e88a-46ca
 
 
 
-### 2) 뮤직 셀렉터
+### 2)뮤직 셀렉터
 
 구글 어시스턴트, TTS를 이용하여 음성인식, 출력 음악 재생 스피커 구현
 +인공지능 서비스 
+
 <img width="550" alt="image" src="https://user-images.githubusercontent.com/102004234/174609293-fecb0f04-b8a9-4833-8aa5-4435ecd53a05.png">
 
 <img width="519" alt="image" src="https://user-images.githubusercontent.com/102004234/174609438-aa74905f-1279-4454-8b05-80ab5f9d5167.png">
 
 
+#핸드폰이 고장나서 시연영상 추후 UPLOAD 예정
+
+
+### 3)미니 IoT Controler
+구글어시스턴트 서비스에 mqtt통신을 추가시켜 edge와 cloud node-red에서 LED 제어(이 외에 센서 추가하여 간편하게 등록 가능 )
+ * Edge, cloud server 나누어 구현
+
+<img width="577" alt="image" src="https://user-images.githubusercontent.com/102004234/174610150-90b854b8-3ac3-4487-a677-a22fbd3d1e2d.png">
+
+
+
+프로젝트 후기 : 기능과 구성을 좀 더 보완시켜 여름방학 때 개인적으로 새로운 작품을 만드는 것이 
