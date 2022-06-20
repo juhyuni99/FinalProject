@@ -67,7 +67,7 @@ https://user-images.githubusercontent.com/102004234/174608405-8acd9e48-e88a-46ca
 <img width="519" alt="image" src="https://user-images.githubusercontent.com/102004234/174609438-aa74905f-1279-4454-8b05-80ab5f9d5167.png">
 
 
-# 핸드폰이 고장나서 시연영상 추후 UPLOAD 예정
+### 핸드폰이 고장나서 시연영상 추후 UPLOAD 예정
 
 
 ## 3)미니 IoT Controler
