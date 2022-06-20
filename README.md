@@ -25,7 +25,7 @@
  ### Edge server
 >>미니 IoT Controler-google assistant mqtt publish, 스마트 가로등
 
-## 1)집 외부 가로등 구현
+## 1)주택 집 외부 벽 가로등 구현
 
 어두운 저녁 범죄율이 높아짐. 
 범죄 예방을 위해 집 외부 벽에 조도센서와 네온픽셀 센서를 달아
