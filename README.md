@@ -36,8 +36,6 @@
 <img width="548" alt="image" src="https://user-images.githubusercontent.com/102004234/174609093-181ed9ab-9b06-41cb-88c6-4238e8ba73d2.png">
 
 
-(https://user-images.githubusercontent.com/102004234/174600976-20296bc2-dade-4136-8930-76db37bc5d39.png)
-
 [node-red]
 <img width="785" alt="image" src="https://user-images.githubusercontent.com/102004234/174479882-1d2d93f9-9951-48b5-88fc-ac9e7a2f82ec.png">
 
