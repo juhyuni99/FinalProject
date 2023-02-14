@@ -27,16 +27,16 @@
 
 ## 1)주택 집 외부 벽 가로등 구현
 
-어두운 저녁 범죄율이 높아짐. 
-범죄 예방을 위해 집 외부 벽에 조도센서와 네온픽셀 센서를 달아
+ * 어두운 저녁 범죄율이 높아짐. 
+ * 범죄 예방을 위해 집 외부 벽에 조도센서와 네온픽셀 센서를 달아
 밝기 감지에 따라 색이 변하는 스마트 가로등 구현
-(인터넷이 끊켜도 상관없는 자동 제어를 위해 edge단 서버 사용!)
+   (인터넷이 끊켜도 상관없는 자동 제어를 위해 edge단 서버 사용!)
 
 
 <img width="548" alt="image" src="https://user-images.githubusercontent.com/102004234/174609093-181ed9ab-9b06-41cb-88c6-4238e8ba73d2.png">
 
 
-[image](https://user-images.githubusercontent.com/102004234/174600976-20296bc2-dade-4136-8930-76db37bc5d39.png)
+(https://user-images.githubusercontent.com/102004234/174600976-20296bc2-dade-4136-8930-76db37bc5d39.png)
 
 [node-red]
 <img width="785" alt="image" src="https://user-images.githubusercontent.com/102004234/174479882-1d2d93f9-9951-48b5-88fc-ac9e7a2f82ec.png">
@@ -59,8 +59,7 @@ https://user-images.githubusercontent.com/102004234/174608405-8acd9e48-e88a-46ca
 
 ## 2)뮤직 셀렉터
 
-구글 어시스턴트, TTS를 이용하여 음성인식, 출력 음악 재생 스피커 구현
-+인공지능 서비스 
+ * 구글 어시스턴트, TTS를 이용하여 음성인식, 출력 음악 재생 스피커 구현 + 인공지능 서비스 
 
 <img width="550" alt="image" src="https://user-images.githubusercontent.com/102004234/174609293-fecb0f04-b8a9-4833-8aa5-4435ecd53a05.png">
 
@@ -73,17 +72,17 @@ https://user-images.githubusercontent.com/102004234/218676085-64d86061-394a-4205
 
 
 ## 3)미니 IoT Controler
-구글어시스턴트 서비스에 mqtt통신을 추가시켜 edge와 cloud node-red에서 LED 제어(이 외에 센서 추가하여 간편하게 등록 가능 )
+ * 구글어시스턴트 서비스에 mqtt통신을 추가시켜 edge와 cloud node-red에서 LED 제어(이 외에 센서 추가하여 간편하게 등록 가능 )
  * Edge, cloud server 나누어 구현
 
 <img width="577" alt="image" src="https://user-images.githubusercontent.com/102004234/174610150-90b854b8-3ac3-4487-a677-a22fbd3d1e2d.png">
 
-불켜 => LED ON
+ * '불켜' => LED ON
 
 https://user-images.githubusercontent.com/102004234/218676322-d710aa09-0c2e-4a6e-ae83-c2a05d1a65d9.mp4
 
 
-불꺼 => LED OFF
+* '불꺼' => LED OFF
 
 https://user-images.githubusercontent.com/102004234/218676344-73eb76a4-0a48-4863-b13e-b2fdcf36da6c.mp4
 
