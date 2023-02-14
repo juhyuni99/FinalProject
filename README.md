@@ -73,7 +73,7 @@ https://user-images.githubusercontent.com/102004234/174608405-8acd9e48-e88a-46ca
 <img width="519" alt="image" src="https://user-images.githubusercontent.com/102004234/174609438-aa74905f-1279-4454-8b05-80ab5f9d5167.png">
 
 
-
+>> #### 동작영상
 https://user-images.githubusercontent.com/102004234/218676085-64d86061-394a-4205-a512-f578d0ac6036.mp4
 
 
@@ -84,12 +84,13 @@ https://user-images.githubusercontent.com/102004234/218676085-64d86061-394a-4205
 
 <img width="577" alt="image" src="https://user-images.githubusercontent.com/102004234/174610150-90b854b8-3ac3-4487-a677-a22fbd3d1e2d.png">
 
- * '불켜' => LED ON
+ >> #### 동작영상1('불켜' => LED ON)
 
 https://user-images.githubusercontent.com/102004234/218676322-d710aa09-0c2e-4a6e-ae83-c2a05d1a65d9.mp4
 
 
-* '불꺼' => LED OFF
+
+ >> #### 동작영상2('불꺼' => LED OFF)
 
 https://user-images.githubusercontent.com/102004234/218676344-73eb76a4-0a48-4863-b13e-b2fdcf36da6c.mp4
 
