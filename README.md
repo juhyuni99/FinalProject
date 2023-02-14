@@ -36,19 +36,28 @@
 <img width="548" alt="image" src="https://user-images.githubusercontent.com/102004234/174609093-181ed9ab-9b06-41cb-88c6-4238e8ba73d2.png">
 
 
-[node-red]
-<img width="785" alt="image" src="https://user-images.githubusercontent.com/102004234/174479882-1d2d93f9-9951-48b5-88fc-ac9e7a2f82ec.png">
+ >> #### node-red
+ > 
+ > <img width="785" alt="image" src="https://user-images.githubusercontent.com/102004234/174479882-1d2d93f9-9951-48b5-88fc-ac9e7a2f82ec.png">
 
 
-![image](https://user-images.githubusercontent.com/102004234/174607098-72ff1578-0e62-4168-ba15-6bf5b2257ab5.png)
+ >> #### code
+ > ![image](https://user-images.githubusercontent.com/102004234/174607098-72ff1578-0e62-4168-ba15-6bf5b2257ab5.png)
 
 ### 조도센서 Value 값에 따라 neopixel 색 지정
  * 어두울 때 : 쩅한 red+yellow
  * 약간 어두울 때 : sky
  * 밝을 때 : 색 없음
-![image](https://user-images.githubusercontent.com/102004234/174607131-c4989f2c-0d63-4b63-a347-26e15e4b367f.png)
+
+ >> #### code
+ >
+ ><img width="337" alt="image" src="https://user-images.githubusercontent.com/102004234/218678534-4937ff69-842e-4562-b032-162a6265892e.png">
+
 ![image](https://user-images.githubusercontent.com/102004234/174607955-085de658-31ce-4237-9242-63f88ab1f255.png)
 ![image](https://user-images.githubusercontent.com/102004234/174607976-41ba478d-6400-463d-b42b-df230d5b62b9.png)
+
+
+ >> #### 동작영상
 
 
 https://user-images.githubusercontent.com/102004234/174608405-8acd9e48-e88a-46ca-8f03-03997295095f.mp4
