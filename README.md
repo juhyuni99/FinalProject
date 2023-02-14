@@ -67,7 +67,9 @@ https://user-images.githubusercontent.com/102004234/174608405-8acd9e48-e88a-46ca
 <img width="519" alt="image" src="https://user-images.githubusercontent.com/102004234/174609438-aa74905f-1279-4454-8b05-80ab5f9d5167.png">
 
 
-### 핸드폰이 고장나서 시연영상 추후 UPLOAD 예정
+
+https://user-images.githubusercontent.com/102004234/218676085-64d86061-394a-4205-a512-f578d0ac6036.mp4
+
 
 
 ## 3)미니 IoT Controler
@@ -76,6 +78,15 @@ https://user-images.githubusercontent.com/102004234/174608405-8acd9e48-e88a-46ca
 
 <img width="577" alt="image" src="https://user-images.githubusercontent.com/102004234/174610150-90b854b8-3ac3-4487-a677-a22fbd3d1e2d.png">
 
-### 핸드폰이 고장나서 시연영상 추후 UPLOAD 예정
+불켜 => LED ON
+
+https://user-images.githubusercontent.com/102004234/218676322-d710aa09-0c2e-4a6e-ae83-c2a05d1a65d9.mp4
+
+
+불꺼 => LED OFF
+
+https://user-images.githubusercontent.com/102004234/218676344-73eb76a4-0a48-4863-b13e-b2fdcf36da6c.mp4
+
+
 
 ## 프로젝트 후기 : 기능과 구성을 좀 더 보완시켜 여름방학 때 개인적으로 새로운 작품을 만드는 것이 목표. 교수님께서 피드백 해주신대로 iot컨트롤러 기능을 특정 단어로만 센서를 제어하지 말고 " 불 켜 " , " 전등 켜 " 다 인식 가능하도록 구현하기!
