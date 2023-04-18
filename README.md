@@ -56,7 +56,7 @@
  >> #### code
  > ![image](https://user-images.githubusercontent.com/102004234/174607098-72ff1578-0e62-4168-ba15-6bf5b2257ab5.png)
 
-### 조도센서 Value 값에 따라 neopixel 색 지정
+### ✔️조도센서 Value 값에 따라 neopixel 색 지정
  * 어두울 때 : 쩅한 red+yellow
  * 약간 어두울 때 : sky
  * 밝을 때 : 색 없음
