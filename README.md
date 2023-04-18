@@ -9,6 +9,8 @@
  * MQTT, Node-Red 활용 능력
  * AWS EC2 (Linux) 활용 능력
  * IBM Cloud 활용 능력
+ * MPU(Raspberry pi) 활용 능력
+ * Python virtual environment 활용 능력
  * Docker Container 활용
  * Google Assistant 활용
  * Cloud Server, Edge Server 에 대한 이해와 활용
@@ -16,11 +18,13 @@
  * 팀원과의 소통을 통한 협업 능력
 
 ## 🔨사용 보드
- * Raspberry pi
+ * Raspberry pi3
  * Esp8266
 
 ## ⚡사용 기술
- * Docker : MQTT 서버 제작
+ * Docker
+ * Google Assistant
+ * Bluetooth
 
 ## 사용언어
  * Python
