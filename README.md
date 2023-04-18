@@ -18,8 +18,8 @@
  * 팀원과의 소통을 통한 협업 능력
 
 ## 🔨사용 보드
- * Raspberry pi3
- * Esp8266
+ * Raspberry pi3 : 마이크 제어, 스피커 제어, MQTT 통신 서버 제어, Node-Red
+ * Esp8266 : MQTT 통신, Neopixel
 
 ## ⚡사용 기술
  * Docker : MQTT 서버 구축
