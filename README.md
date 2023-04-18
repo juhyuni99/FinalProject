@@ -7,9 +7,9 @@
 
 ## 📚얻은 역량
  * MQTT, Node-Red 활용 능력
- * AWS EC2 (Linux) 활용 능력
+ * Linux 환경에서의 프로그래밍 능력
  * IBM Cloud 활용 능력
- * MPU(Raspberry pi) 활용 능력
+ * Raspberry pi 활용 능력
  * Python virtual environment 활용 능력
  * Docker Container 활용
  * Google Assistant 활용
@@ -23,13 +23,17 @@
 
 ## ⚡사용 기술
  * Docker
- * Google Assistant
- * Bluetooth
+ * Google Assistant : 음성 인식
+ * Bluetooth : Bluetooth 스피커 연결
 
-## 사용언어
+## 📝사용언어
  * Python
  * C++
 
+## 🔆개발환경
+ * Raspbian
+ * Visual Studio Code
+ * 
 ## 💡기능
 * 기능 : 미세먼지 알라미, 뮤직 셀렉터, 스마트 가로등, 침입자 감지 메시지, 홈 관리 시스템, 미니 IoT Controler
 <img width="416" alt="image" src="https://user-images.githubusercontent.com/102004234/232667637-f064386f-93fd-4854-a356-f93458b0af86.png">
