@@ -1,11 +1,12 @@
 # FinalProject  
-## '스마트 홈'  
+## 'IoT 스마트 홈'  
 
 
 * 기획 의도 : 주택에 거주하는 1인 가구를 대상으로 보다 편리하고 안전하게 생활할 수 있도록 다양한 기능을 갖춘 스마트 홈을 제작함. 자동제어, 관리 시스템, 편의 시스템에 초점을 맞춤.
 
 
 * 기능 : 미세먼지 알라미, 뮤직 셀렉터, 스마트 가로등, 침입자 감지 메시지, 홈 관리 시스템, 미니 IoT Controler
+<img width="416" alt="image" src="https://user-images.githubusercontent.com/102004234/232667637-f064386f-93fd-4854-a356-f93458b0af86.png">
 
 
 * 기능 소개 
@@ -94,6 +95,25 @@ https://user-images.githubusercontent.com/102004234/218676322-d710aa09-0c2e-4a6e
 
 https://user-images.githubusercontent.com/102004234/218676344-73eb76a4-0a48-4863-b13e-b2fdcf36da6c.mp4
 
+## 4) 미세먼지 알라미
+ * 공공데이터 API + 기상청 API를 가져와 보고싶은 정보만 추출
+ * 날씨 데이터 -> 맑음, 흐림 등을 구분에 따라 다른 이미지 파일을 넣어 Node-Red UI로 깔끔한 화면 구성
+<img width="415" alt="image" src="https://user-images.githubusercontent.com/102004234/232667870-315e6e21-c92a-42cc-a859-457b7c1db8d2.png">
+Node-Red
+<img width="418" alt="image" src="https://user-images.githubusercontent.com/102004234/232667891-7e1987ad-2385-4a60-a1b1-c3f7c6b1a789.png">
 
+## 5) 침입자 감지 메시지
+ * 일상모드, 감지모드
+ * 감지모드 : 초음파 센서 가까이 인식되면 사전에 등록된 이메일로 알림 전송
+ * 알림 기능을 통해 집을 비웠을 때 발생하는 상황에 대해 빠르게 대처 가능
+<img width="416" alt="image" src="https://user-images.githubusercontent.com/102004234/232667937-73defbdf-3793-43b8-98e0-b4856ace9b38.png">
+<img width="416" alt="image" src="https://user-images.githubusercontent.com/102004234/232667975-2afacf35-a5c0-4d63-b1c5-5b896ed8909b.png">
 
-## 프로젝트 후기 : 기능과 구성을 좀 더 보완시켜 여름방학 때 개인적으로 새로운 작품을 만드는 것이 목표. 교수님께서 피드백 해주신대로 iot컨트롤러 기능을 특정 단어로만 센서를 제어하지 말고 " 불 켜 " , " 전등 켜 " 다 인식 가능하도록 구현하기!
+## 6) 홈 관리 시스템
+ * 하나의 페이지에서 여러 센서 제어 가능 + 데이터 시각화
+<img width="418" alt="image" src="https://user-images.githubusercontent.com/102004234/232668007-7cb8e7f7-2b33-4929-805c-4e529b655d1a.png">
+
+## 후기
+* 여러웠던 점 : 접속 불안정, 구글 어시스턴트 설치 오류
+* 프로젝트 후기 : 기능과 구성을 좀 더 보완시켜 여름방학 때 개인적으로 새로운 작품을 만드는 것이 목표. 
+교수님께서 피드백 해주신대로 iot컨트롤러 기능을 특정 단어로만 센서를 제어하지 말고 " 불 켜 " , " 전등 켜 " 다 인식 가능하도록 구현하기
