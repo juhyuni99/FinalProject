@@ -11,6 +11,7 @@
  * IBM Cloud 활용 능력
  * Raspberry pi 활용 능력
  * Python virtual environment 활용 능력
+ * json 이해와 활용
  * Docker Container 활용
  * Google Assistant 활용
  * Cloud Server, Edge Server 에 대한 이해와 활용
@@ -29,6 +30,7 @@
 ## 📝사용언어
  * Python
  * C++
+ * json
 
 ## 🔆개발환경
  * Raspbian
