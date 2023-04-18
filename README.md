@@ -11,7 +11,7 @@
  * IBM Cloud 활용 능력
  * Docker Container 활용
  * Google Assistant 활용
- * 클라우드 서비스 이해
+ * Cloud Server, Edge Server 에 대한 이해와 활용
  * 팀을 이끌어가는 능력
  * 팀원과의 소통을 통한 협업 능력
  
