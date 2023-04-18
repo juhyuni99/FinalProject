@@ -22,7 +22,7 @@
  * Esp8266
 
 ## ⚡사용 기술
- * Docker
+ * Docker : MQTT 서버 구축
  * Google Assistant : 음성 인식
  * Bluetooth : Bluetooth 스피커 연결
 
@@ -33,7 +33,7 @@
 ## 🔆개발환경
  * Raspbian
  * Visual Studio Code
- * 
+ 
 ## 💡기능
 * 기능 : 미세먼지 알라미, 뮤직 셀렉터, 스마트 가로등, 침입자 감지 메시지, 홈 관리 시스템, 미니 IoT Controler
 <img width="416" alt="image" src="https://user-images.githubusercontent.com/102004234/232667637-f064386f-93fd-4854-a356-f93458b0af86.png">
