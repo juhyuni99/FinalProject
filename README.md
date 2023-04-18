@@ -14,7 +14,18 @@
  * Cloud Server, Edge Server 에 대한 이해와 활용
  * 팀을 이끌어가는 능력
  * 팀원과의 소통을 통한 협업 능력
- 
+
+## 🔨사용 보드
+ * Raspberry pi
+ * Esp8266
+
+## ⚡사용 기술
+ * Docker : MQTT 서버 제작
+
+## 사용언어
+ * Python
+ * C++
+
 ## 💡기능
 * 기능 : 미세먼지 알라미, 뮤직 셀렉터, 스마트 가로등, 침입자 감지 메시지, 홈 관리 시스템, 미니 IoT Controler
 <img width="416" alt="image" src="https://user-images.githubusercontent.com/102004234/232667637-f064386f-93fd-4854-a356-f93458b0af86.png">
