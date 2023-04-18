@@ -1,10 +1,21 @@
 # FinalProject  
-## 'IoT 스마트 홈'  
+## 'IoT 스마트 홈'
+> 🏡MQTT통신, Node-Red 환경을 이용한 IoT 스마트 홈 제작🏡
 * 프로젝트 기간 : 2022.05 ~ 2022.06
 
 * 기획 의도 : 주택에 거주하는 1인 가구를 대상으로 보다 편리하고 안전하게 생활할 수 있도록 다양한 기능을 갖춘 스마트 홈을 제작함. 자동제어, 관리 시스템, 편의 시스템에 초점을 맞춤.
 
-
+## 📚얻은 역량
+ * MQTT, Node-Red 활용 능력
+ * AWS EC2 (Linux) 활용 능력
+ * IBM Cloud 활용 능력
+ * Docker Container 활용
+ * Google Assistant 활용
+ * 클라우드 서비스 이해
+ * 팀을 이끌어가는 능력
+ * 팀원과의 소통을 통한 협업 능력
+ 
+## 💡기능
 * 기능 : 미세먼지 알라미, 뮤직 셀렉터, 스마트 가로등, 침입자 감지 메시지, 홈 관리 시스템, 미니 IoT Controler
 <img width="416" alt="image" src="https://user-images.githubusercontent.com/102004234/232667637-f064386f-93fd-4854-a356-f93458b0af86.png">
 
